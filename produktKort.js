@@ -1,3 +1,5 @@
+MainContentProductCards = [];
+
 class ProductCard {
     constructor(name, price, image, category, description) {
         this.name = name;
@@ -5,6 +7,11 @@ class ProductCard {
         this.image = image;
         this.category = category;
         this.description = description;
+
+        this.addToArray();
+    }
+    addToArray() {
+        MainContentProductCards.push(this);
     }
 }
 
@@ -114,7 +121,7 @@ let oven = new ProductCard(
     "Det gyllenbruna på potatisgratängen. Skorpan på en oxfilé. Saftigheten i en god chokladtårta. Att få jämna resultat varje gång kräver exakt kontrollerad värme, som fördelas konsekvent i hela ugnen. Till skillnad från vanliga ugnar har SurroundCook-ug"
 );
 //#endregion
-//#region
+//#region TV
 let samsungTv = new ProductCard(
     "Samsung 55 U8095F 4K smart-TV (2025)",
     "9990",
@@ -137,26 +144,6 @@ let lgTv = new ProductCard(
     "LG OLED evo C5 Pro tar C-serien till nästa nivå med högre ljusstyrka och skärpa tack vare Brightness Booster Pro. Upplev djup svärta, livfulla färger och smarta funktioner – film, spel och sport blir alltid skarpt och realistiskt."
 );
 //#endregion
-
-MainContentProductCards = [
-    iPhone17,
-    iPhone17Pro,
-    iPhoneAir,
-    galaxyA16,
-    galaxyS25FE,
-    galaxyS25Ultra,
-    logitechHeadset,
-    logitechMouse,
-    logitechKeyboard,
-    monitor,
-    mouseMat,
-    dishwasher,
-    stovetop,
-    oven,
-    samsungTv,
-    iffalconTv,
-    lgTv,
-];
 
 //#region Check Category
 isGaming = true;

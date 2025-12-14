@@ -5,3 +5,8 @@
 body {
     min-height: 99vh;
 }
+
+footer {
+    text-align: center;
+    bottom: 0;
+}

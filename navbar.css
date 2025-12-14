@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkgray;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#header-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.header-button {
+    width: 5rem;
+    height: 3rem;
+    cursor: pointer;
+}
+

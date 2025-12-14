@@ -4,9 +4,13 @@
 
 body {
     min-height: 99vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 footer {
     text-align: center;
     bottom: 0;
 }
+

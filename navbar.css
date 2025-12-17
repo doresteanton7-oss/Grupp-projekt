@@ -5,9 +5,11 @@ header {
     background-color: darkgray;
     padding-left: 1rem;
     padding-right: 1rem;
-    position:sticky;
+    position: sticky;
     top: 0;
     z-index: 1000;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #header-buttons {
@@ -21,3 +23,22 @@ header {
     cursor: pointer;
 }
 
+@media (min-width: 800px) {
+    header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        flex-direction: row;
+    }
+    .header-button {
+        width: 5rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1100px) {
+    header {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}

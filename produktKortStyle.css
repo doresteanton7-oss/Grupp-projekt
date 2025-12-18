@@ -1,70 +1,60 @@
 #main {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     justify-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
 }
 
 #main-cardInspect {
+    /* Positionering för att centrera*/
 
-/* Positionering för att centrera*/
+    position: fixed;
 
-position: fixed;
+    top: 50%;
 
-top: 50%;
+    left: 50%;
 
-left: 50%;
+    transform: translate(-50%, -50%);
 
-transform: translate(-50%, -50%);
+    /* Se till att den ligger över allt annat */
 
+    z-index: 1000;
 
-/* Se till att den ligger över allt annat */
+    /* Utseende */
 
-z-index: 1000;
+    background-color: white; /* Viktigt, annars blir den genomskinlig */
 
+    padding: 30px;
 
-/* Utseende */
+    border-radius: 10px; /* Snyggare hörn */
 
-background-color: white; /* Viktigt, annars blir den genomskinlig */
+    /* Göm den som standard tills man klickar */
 
-padding: 30px;
+    display: none;
 
-border-radius: 10px; /* Snyggare hörn */
+    max-height: 100vh;
 
+    width: 90%;
 
-/* Göm den som standard tills man klickar */
+    max-width: 500px;
 
-display: none;
+    /* Flex inställningar för innehållet */
 
-max-height: 100vh;
+    flex-direction: column;
 
-width: 90%;
+    align-items: center;
 
-max-width: 500px;
+    justify-content: center;
 
+    /* Skugga för att lyfta fram den från bakgrunden */
 
-/* Flex inställningar för innehållet */
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5),
+        /* Detta skapar en mörk bakgrund över hela sidan! */ rgba(0, 0, 0, 0.25)
+            0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px;
 
-flex-direction: column;
-
-align-items: center;
-
-justify-content: center;
-
-
-/* Skugga för att lyfta fram den från bakgrunden */
-
-box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5), /* Detta skapar en mörk bakgrund över hela sidan! */
-
-rgba(0, 0, 0, 0.25) 0px 54px 55px,
-
-rgba(0, 0, 0, 0.12) 0px -12px 30px;
-
-overflow-y: auto;
+    overflow-y: auto;
 }
-
-
 
 .focused-card {
     display: flex;
@@ -81,12 +71,14 @@ overflow-y: auto;
     gap: 10px;
     flex-wrap: wrap;
     flex: 1;
- 
+    justify-content: center;
 }
 
 .product-card {
+    padding: 10px;
     border: 2px solid black;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -101,4 +93,15 @@ overflow-y: auto;
 
 .cardPrice {
     font-size: 30px;
+}
+
+@media (min-width: 1100px) {
+    main {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    #main-cardContainer {
+        justify-content: baseline;
+    }
 }

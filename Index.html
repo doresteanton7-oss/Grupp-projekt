@@ -21,7 +21,7 @@
                 </button>
                 <button class="header-button" id="header-button3">TV</button>
                 <button class="header-button" id="header-button4">
-                    Mobil Telefon
+                    Mobil-<br/>telefoner
                 </button>
             </div>
             <img
@@ -32,13 +32,12 @@
 
         <main id="main">
             <dialog id="cart-dialog">
-                <h2>Varukorg</h2>
+                <h1 id="cart-header">Varukorg</h1>
+                <div id="cart-items"></div>
                 <p id="total-sum">Varukorgen är tom</p>
-                <form>
-                    <button onclick="showCartDialog(false)" type="button">
-                        Cancel
-                    </button>
-                </form>
+                <button id="closeButton" onclick="showCartDialog(false)" type="button">
+                Stäng
+                </button>
             </dialog>
 
             <div id="main-cardInspect"></div>

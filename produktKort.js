@@ -232,6 +232,7 @@ function renderPageContent() {
                 );
             }
         }
+        
     }
 
     let inspectButton = document.querySelectorAll(".inspect-button");

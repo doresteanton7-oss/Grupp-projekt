@@ -232,6 +232,7 @@ function renderPageContent() {
                 );
             }
         }
+        
     }
 
     let inspectButton = document.querySelectorAll(".inspect-button");
@@ -259,7 +260,7 @@ function renderFocusedCardPage(card) {
     return `
             <div class="focused-card">
                 <h1>${card.name}</h1>
-                <img src="${card.image}" width="350">
+                <img src="${card.image}" width="150">
                 <p> Priset på denna produkten är ${card.price} kr.</strong></p>
                 <p>${card.description}</p>
                 <button id="buy-button">Köp</button>
@@ -281,6 +282,8 @@ function onProductButtonClick(event) {
 
     focusedCard.innerHTML += renderFocusedCardPage(product);
 
+    focusedCard.style.display = "flex";
+
     let buyButton = document.querySelector("#buy-button");
     buyButton.addEventListener("click", () => addToCart(product));
 
@@ -291,6 +294,9 @@ function onProductButtonClick(event) {
 function cleanFocusedCardHTML() {
     let focusedCard = document.querySelector("#main-cardInspect");
     focusedCard.innerHTML = "";
+
+        focusedCard.style.display = "none";
+
 }
 
 //#endregion

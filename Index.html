@@ -7,37 +7,43 @@
         <link rel="stylesheet" href="kundkorgStyle.css" />
         <link rel="stylesheet" href="navbar.css" />
         <link rel="stylesheet" href="produktKortStyle.css" />
-        <link rel="stylesheet" href="indexStyle.css">
+        <link rel="stylesheet" href="indexStyle.css" />
     </head>
     <body>
         <header id="header">
-            <img id="varukorg" src="https://cdn.discordapp.com/attachments/1445029360716349512/1448992502865596487/shopping-cart.png?ex=693d46ed&is=693bf56d&hm=a589a01dc3d7c022d94d7ab56a691fb9c24b3fb8eed5ac435f82f1ec5fbd7a36" onclick="showCartDialog(true)">
             <h1 id="title">Webbshop</h1>
-            
             <div id="header-buttons">
-                <button class="header-button" id="header-button1">Gaming</button>
-                <button class="header-button" id="header-button2">Vitvaror</button>
+                <button class="header-button" id="header-button1">
+                    Gaming
+                </button>
+                <button class="header-button" id="header-button2">
+                    Vitvaror
+                </button>
                 <button class="header-button" id="header-button3">TV</button>
-                <button class="header-button" id="header-button4">Mobil-Telefon</button>
+                <button class="header-button" id="header-button4">
+                    Mobil Telefon
+                </button>
             </div>
-            
-           
-          
+            <img
+                id="varukorg"
+                src="shopping-cart.png"
+                onclick="showCartDialog(true)" />
         </header>
 
         <main id="main">
-            
             <dialog id="cart-dialog">
                 <h2>Varukorg</h2>
                 <p id="total-sum">Varukorgen är tom</p>
                 <form>
-                    <button onclick=showCartDialog(false) type="button">Cancel</button>
+                    <button onclick="showCartDialog(false)" type="button">
+                        Cancel
+                    </button>
                 </form>
             </dialog>
-            <div id="main-cardContainer"></div>
-            <div id="main-cardInspect"></div>
-        </main>
 
+            <div id="main-cardInspect"></div>
+            <div id="main-cardContainer"></div>
+        </main>
         <footer id="footer"><div>&copy;Anton jonathan 2025</div></footer>
 
         <script src="navbar.js"></script>

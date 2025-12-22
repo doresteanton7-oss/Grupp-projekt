@@ -232,7 +232,6 @@ function renderPageContent() {
                 );
             }
         }
-        
     }
 
     let inspectButton = document.querySelectorAll(".inspect-button");
@@ -240,8 +239,6 @@ function renderPageContent() {
         button.addEventListener("click", onProductButtonClick);
     });
 }
-
-
 
 function renderMainContentPage(card) {
     return `
@@ -289,14 +286,21 @@ function onProductButtonClick(event) {
 
     let closeButton = document.querySelector("#close-button");
     closeButton.addEventListener("click", cleanFocusedCardHTML);
+
+    const inspectOverlay = document.querySelector("#main-cardInspect");
+
+    inspectOverlay.addEventListener("click", (event) => {
+        if (event.target === inspectOverlay) {
+            cleanFocusedCardHTML();
+        }
+    });
 }
 
 function cleanFocusedCardHTML() {
     let focusedCard = document.querySelector("#main-cardInspect");
     focusedCard.innerHTML = "";
 
-        focusedCard.style.display = "none";
-
+    focusedCard.style.display = "none";
 }
 
 //#endregion

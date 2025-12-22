@@ -6,14 +6,10 @@ const dialog = document.getElementById("cart-dialog");
 const showCartDialog = (show) => show ? dialog.show() : dialog.close();
 
 
+
 //Funktion för att räkna ut totalsumma
 function calculateTotalSum() {
-    return cart.reduce((sum, product) => sum + product.price, 0);
-}
-
-function updateTotalSum() {
-    const total = calculateTotalSum();
-    totalSum.textContent = `Totalt: ${total} kr`;
+    return cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
 }
 
 //Lägg till produkt i varukorgen
@@ -25,6 +21,18 @@ function addToCart(product) {
         cart.push({ product: product, quantity: 1 });
         }
     renderCart();
+    renderCartIcon();
+    console.table(cart);
+}
+
+function removeFromCart(item) {
+    item.quantity--;
+    if (item.quantity === 0) {
+        cart = cart.filter(i => i !== item);
+    }
+    renderCart();
+    renderCartIcon();
+    console.table(cart);
 }
 
 function renderCart() {
@@ -36,21 +44,32 @@ function renderCart() {
         return;
     }
 
-    let total = 0;
-
     cart.forEach(item => {
         const row = document.createElement('div');
         row.classList.add("cart-row");
 
-        const rowTotal = item.product.price * item.quantity;
-        total += rowTotal;
+        row.innerHTML = `
+            <p>${item.product.name}</p>
+            <span>${item.quantity} st x ${item.product.price} kr</span>
+            <button class="remove-btn">-</button>
+        `;
 
-        row.innerHTML = 
-        `<p id="product-name">${item.product.name}</p>
-        <span>${item.quantity}st x ${item.product.price} kr</span>`;
+        row.querySelector('.remove-btn').addEventListener('click', () => {
+            removeFromCart(item);
+        });
 
         cartItems.appendChild(row);
-
-        totalSum.textContent = `Totalt: ${total} kr`;
     });
+
+    totalSum.textContent = `Totalt: ${calculateTotalSum()} kr`;
 }
+
+
+
+function renderCartIcon() {
+    let cartBanner = document.querySelector(".cart-banner");
+    const headerCart = document.querySelector("#header-cart");
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartBanner.textContent = totalQuantity;
+}
+    

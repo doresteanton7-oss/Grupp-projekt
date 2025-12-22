@@ -40,3 +40,24 @@
     font-weight: bold;
     margin-top: 10px;
 }
+
+#header-cart {
+    display:flex;
+    position: relative;
+}
+
+.cart-banner {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}

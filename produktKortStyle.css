@@ -8,63 +8,28 @@
 }
 
 #main-cardInspect {
-    /* Positionering för att centrera*/
-
     position: fixed;
-
-    top: 50%;
-
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    /* Se till att den ligger över allt annat */
-
-    z-index: 1000;
-
-    /* Utseende */
-
-    background-color: white; /* Viktigt, annars blir den genomskinlig */
-
-    padding: 30px;
-
-    border-radius: 10px; /* Snyggare hörn */
-
-    /* Göm den som standard tills man klickar */
+    inset: 0;
 
     display: none;
-
-    max-height: 100vh;
-
-    width: 90%;
-
-    max-width: 500px;
-
-    /* Flex inställningar för innehållet */
-
-    flex-direction: column;
-
+    justify-content: center;
     align-items: center;
 
-    justify-content: center;
-
-    /* Skugga för att lyfta fram den från bakgrunden */
-
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5),
-        /* Detta skapar en mörk bakgrund över hela sidan! */ rgba(0, 0, 0, 0.25)
-            0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px;
-
-    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .focused-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+
+    max-width: 500px;
+    width: 90%;
+
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    width: 100%;
 }
 
 #main-cardContainer {

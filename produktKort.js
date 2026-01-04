@@ -258,10 +258,12 @@ function renderFocusedCardPage(card) {
             <div class="focused-card">
                 <h1>${card.name}</h1>
                 <img src="${card.image}" width="150">
-                <p> Priset på denna produkten är ${card.price} kr.</strong></p>
+                <p> Priset på denna produkten är <strong>${card.price} kr.</strong></p>
                 <p>${card.description}</p>
+                <div id="inspectCard-buttons">  
                 <button id="buy-button">Köp</button>
-                <button id="close-button">Close</button>
+                <button id="close-button">Close</button>   
+                </div>
             </div>
         `;
 }

@@ -1,18 +1,17 @@
+//Initialisera array för varukorgen och variabel för totalsumman
 let cart = [];
 let totalSum = document.querySelector("#total-sum");
-// Fånga upp dialogelementet 
+// Fånga upp dialogelementet(modal för varukorgen)
 const dialog = document.getElementById("cart-dialog");
-// Funktion för att visa/stänga dialog
+// Funktion för att visa/stänga modalen
 const showCartDialog = (show) => show ? dialog.show() : dialog.close();
 
-
-
-//Funktion för att räkna ut totalsumma
+//Funktion för att räkna ut totalsumman
 function calculateTotalSum() {
     return cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
 }
 
-//Lägg till produkt i varukorgen
+//Funktion för att lägga till produkt i varukorgen
 function addToCart(product) {
     const existingItem = cart.find(item=> item.product.name === product.name);
     if (existingItem) {
@@ -25,6 +24,7 @@ function addToCart(product) {
     console.table(cart);
 }
 
+//Funktion för att ta bort produkt från varukorgen
 function removeFromCart(item) {
     item.quantity--;
     if (item.quantity === 0) {
@@ -35,6 +35,7 @@ function removeFromCart(item) {
     console.table(cart);
 }
 
+//Funktion för att rendera varukorgen
 function renderCart() {
     const cartItems = document.querySelector('#cart-items');
     cartItems.innerHTML = "";
@@ -65,11 +66,10 @@ function renderCart() {
 }
 
 
-
+//Funktion för att uppdatera varukorgsikonen
 function renderCartIcon() {
     let cartBanner = document.querySelector(".cart-banner");
     const headerCart = document.querySelector("#header-cart");
     const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartBanner.textContent = totalQuantity;
 }
-    

@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Webbshop</title>
         <link rel="stylesheet" href="kundkorgStyle.css" />
         <link rel="stylesheet" href="navbar.css" />
         <link rel="stylesheet" href="produktKortStyle.css" />
         <link rel="stylesheet" href="indexStyle.css" />
     </head>
     <body>
+        <!-- Navbar med menyval -->
         <header id="header">
             <h1 id="title">Webbshop</h1>
             <div id="header-buttons">
@@ -24,6 +25,7 @@
                     Mobil-<br/>telefoner
                 </button>
             </div>
+            <!-- Varukorgsikon som är klickbar för att öppna modal -->
             <div id="header-cart">
                 <img
                 id="varukorg"
@@ -34,15 +36,17 @@
         </header>
 
         <main id="main">
+            <!--Modal för varukorg som kan öppnas/stängas-->
             <dialog id="cart-dialog">
                 <h1 id="cart-header">Varukorg</h1>
                 <div id="cart-items"></div>
                 <p id="total-sum">Varukorgen är tom</p>
+                <!--Modal stängs vid tryck av denna knapp-->
                 <button id="closeButton" onclick="showCartDialog(false)" type="button">
                 Stäng
                 </button>
             </dialog>
-
+            <!--Blockelement för av användaren vald produkt-->
             <div id="main-cardInspect"></div>
             <div id="main-cardContainer"></div>
         </main>

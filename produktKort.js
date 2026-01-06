@@ -7,9 +7,10 @@ class ProductCard {
         this.image = image;
         this.category = category;
         this.description = description;
-
+        
         this.addToArray();
     }
+    // Metod som lägger till objekt till array.
     addToArray() {
         MainContentProductCards.push(this);
     }
@@ -58,6 +59,20 @@ let galaxyS25Ultra = new ProductCard(
     "MobilTelefon",
     "Samsung Galaxy S25 Ultra 5G smartphone med banbrytande AI-teknologi har en 6,9-tums Dynamic AMOLED 2x-skärm, en Snapdragon Elite 8-processor och en 200Mpx huvudkamera."
 );
+let googlePixel10ProFold = new ProductCard(
+    "Google Pixel 10 Pro Fold 5G smartphone 16/256GB",
+    16990,
+    "https://next-media.elkjop.com/image/dv_web_D180001340310/943530/google-pixel-10-pro-fold-5g-smartphone-16256gb-mansten.jpg?w=1200&q=75",
+    "MobilTelefon",
+    "Google Pixel 10 Pro Fold 5G smartphone har en imponerande vikbar 6,4-tums OLED-skärm samt 256GB lagring, 16GB RAM och stöd för avancerad AI, IP68-klassning och en hållbar gångjärnsmekanism som klarar upp till 10 års vikningar."
+);
+let googlePixel9a = new ProductCard(
+    "Google Pixel 9a 5G smartphone 8/256GB",
+    5090,
+    "https://next-media.elkjop.com/image/dv_web_D18000130341606/893862/google-pixel-9a-5g-smartphone-8256gb-obsidian.jpg?w=1200&q=75",
+    "MobilTelefon",
+    "Förenkla ditt dagliga liv med Google Pixel 9a 5G-smartphone, som drivs av Tensor G4-chipset. Njut av innehåll på en 6,3-tums POLED-skärm, ta fantastiska bilder med en 48Mpx-kamera och njut av AI-funktioner och ett långvarigt batteri på 5100mAh."
+);
 //#endregion
 //#region Gaming
 
@@ -102,6 +117,20 @@ let console = new ProductCard(
     "https://next-media.elkjop.com/image/dv_web_D18000134916959/994805/playstation-5-pro-2tb-spelkonsol.jpg?w=3840&q=75",
     "Gaming",
     "PlayStation 5 Pro ger dig silkeslen spelupplevelse med upp till 120 fps i kompatibla spel, med stöd för 120 Hz-utmatning på 4K-skärmar och är förbättrad med AI genom PlayStation Spectral Super Resolution."
+);
+let steamDeck = new ProductCard(
+    "Valve Steam Deck OLED handhållen spelmaskin 512GB",
+    9995,
+    "https://next-media.elkjop.com/image/dv_web_D1800010021763278/728525/valve-steam-deck-oled-handhallen-spelmaskin-512gb.jpg?w=1200&q=75",
+    "Gaming",
+    "Valve Steam Deck OLED handhållen spelmaskin ger dig friheten att spela var du vill. Du kan välja din favoritkonfiguration, oavsett om du vill spela på språng, använda en mängd olika kontroller, ansluta Steam Deck till din TV eller använda den som en stationär PC."
+);
+let rogXboxAlly = new ProductCard(
+    "ROG Xbox ALLY handhållen spelkonsol",
+    6990,
+    "https://next-media.elkjop.com/image/dv_web_D180001329610/936805/rog-xbox-ally-handhallen-spelkonsol.jpg?w=1200&q=75",
+    "Gaming",
+    "ROG Xbox ALLY, en bärbar spelkonsol med AMD Z2A-processor, låter dig njuta av spel var som helst. Utrustad med en 7-tums FHD 120Hz IPS-skärm och stödjer Wi-Fi 6E, Bluetooth 5.2, USB-C."
 );
 //#endregion
 //#region Vitvaror
@@ -148,6 +177,20 @@ let dishwasher2 = new ProductCard(
     "Vitvaror",
     "Effektiv och tyst, Siemens SN43ES71MS diskmaskin erbjuder flexibel lastning, avancerad rengöringsteknik och energibesparande funktioner för skinande rena tallrikar varje gång.",
 );
+let microWave1 = new ProductCard(
+    "Whirlpool Fristående Mikrovågsugn MWPS101B",
+    899,
+    "https://next-media.elkjop.com/image/dv_web_D180001323132/927664/whirlpool-fristaende-mikrovagsugn-mwps101b-svart.jpg?w=1200&q=75",
+    "Vitvaror",
+    "Whirlpools fristående mikrovågsugn MWPS101B har en elegant svart design med en kapacitet på 20 liter, en 25 cm roterande platta, 6 effektnivåer och funktioner som varmhållning, uppvärmning, degjäsning och yoghurt."
+);
+let microWave2 = new ProductCard(
+    "Siemens IQ300 mikrovågsugn BF523LMB3",
+    2967,
+    "https://next-media.elkjop.com/image/dv_web_D18000135114370/382796/siemens-iq300-mikrovagsugn-bf523lmb3-svart.jpg?w=1200&q=75",
+    "Vitvaror",
+    "7 automatiska program som hjälper dig att uppnå fantastiska resultat. För snabb rengöring så mjukas smutsen upp på förhand genom förångning av vatten med lite diskmedel. Den kan sedan lätt torkas ur – humidClean-programmet."
+);
 //#endregion
 //#region TV
 let samsungTv = new ProductCard(
@@ -192,19 +235,35 @@ let philipsTv = new ProductCard(
     "TV",
     "Philips 55” OLED760 4K OLED Smart TV erbjuder förstklassig bildkvalitet och en värld av underhållning inom räckhåll. P5 AI Intelligent Picture Engine med HDR, OLED-teknik och Ambilight ger en uppslukande upplevelse som sträcker sig bortom din skärm."
 );
+let tclTv2 = new ProductCard(
+    "TCL 115” C7K 4K MINI-LED TV",
+    249990,
+    "https://next-media.elkjop.com/image/dv_web_D1800013124125/903088/tcl-115-c7k-4k-mini-led-tv-2025.jpg?w=1200&q=75",
+    "TV",
+    "TCL C7K-serien kombinerar QD-Mini LED, QLED, 4K HDR Premium 3000, 144Hz Motion Clarity Pro för kraftfullt exakta kontraster, skarp och färgstark HDR-bildkvalitet."
+);
+let samsungTv3 = new ProductCard(
+    "Samsung 115” QN90F Neo QLED 4K MiniLED Smart-TV",
+    124990,
+    "https://next-media.elkjop.com/image/dv_web_D1800013604202/987983/samsung-115-qn90f-neo-qled-4k-miniled-smart-tv-2025.jpg?w=1200&q=75",
+    "TV",
+    "Samsung 115” QN90F 4K MiniLED Smart TV ger liv åt alla dina favoritfilmer, TV-serier och spel. Med Neo Quantum Dot och Quantum Mini LED Pro, fantastiskt surroundljud och en mängd spelsfunktioner kommer denna TV inte att göra dig besviken."
+);
 //#endregion
 
 let gamingButton = document.querySelector("#header-button1");
 let vitvarorButton = document.querySelector("#header-button2");
 let tvButton = document.querySelector("#header-button3");
 let mobilTelefonButton = document.querySelector("#header-button4");
-
+// Variabel för att hålla reda på den aktiva kategorin. Null innebär att alla kategorier är aktiva.
 let activeCategory = null;
+
 gamingButton.addEventListener("click", () => setCategory("Gaming"));
 vitvarorButton.addEventListener("click", () => setCategory("Vitvaror"));
 tvButton.addEventListener("click", () => setCategory("TV"));
 mobilTelefonButton.addEventListener("click", () => setCategory("MobilTelefon"));
 
+// Funktion för att hantera kategorier.
 function setCategory(category) {
     activeCategory = category;
     renderPageContent();
@@ -218,6 +277,8 @@ function renderPageContent() {
 
     for (let i = 0; i < MainContentProductCards.length; i++) {
         const card = MainContentProductCards[i];
+        // Om ingen kategori är vald visas alla kategorier(alla produkter).
+        // Är en kategori vald så visas endast den kategorin.
         if (activeCategory === null || card.category === activeCategory) {
             mainCardContainer.innerHTML += renderMainContentPage(card);
         }  
@@ -295,4 +356,5 @@ function cleanFocusedCardHTML() {
 }
 
 //#endregion
+// Funktionsanrop vid start av hemsidan
 renderPageContent();

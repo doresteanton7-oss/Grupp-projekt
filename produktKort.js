@@ -1,5 +1,6 @@
 MainContentProductCards = [];
 
+//Skapar classen som används till produkt korten
 class ProductCard {
     constructor(name, price, image, category, description) {
         this.name = name;
@@ -7,7 +8,7 @@ class ProductCard {
         this.image = image;
         this.category = category;
         this.description = description;
-        
+
         this.addToArray();
     }
     // Metod som lägger till objekt till array.
@@ -168,14 +169,14 @@ let dishwasher = new ProductCard(
     8995,
     "https://next-media.elkjop.com/image/dv_web_D1800012699179/767176/bosch-serie-6-diskmaskin-smu6zcw71s-vit.jpg?w=1200&q=75",
     "Vitvaror",
-    "Bosch SMU6ZCW71 diskmaskin är utformad för att leverera effektiv och grundlig rengöring med sina avancerade funktioner, vilket gör den till ett lämpligt tillskott i alla kök.",
+    "Bosch SMU6ZCW71 diskmaskin är utformad för att leverera effektiv och grundlig rengöring med sina avancerade funktioner, vilket gör den till ett lämpligt tillskott i alla kök."
 );
 let dishwasher2 = new ProductCard(
     "Siemens IQ300 Diskmaskin SN43ES71MS (rostfri)",
     7495,
     "https://next-media.elkjop.com/image/dv_web_D18000128321881/795102/siemens-iq300-diskmaskin-sn43es71ms-rostfri.jpg?w=1200&q=75",
     "Vitvaror",
-    "Effektiv och tyst, Siemens SN43ES71MS diskmaskin erbjuder flexibel lastning, avancerad rengöringsteknik och energibesparande funktioner för skinande rena tallrikar varje gång.",
+    "Effektiv och tyst, Siemens SN43ES71MS diskmaskin erbjuder flexibel lastning, avancerad rengöringsteknik och energibesparande funktioner för skinande rena tallrikar varje gång."
 );
 let microWave1 = new ProductCard(
     "Whirlpool Fristående Mikrovågsugn MWPS101B",
@@ -219,7 +220,7 @@ let tclTv = new ProductCard(
     9990,
     "https://next-media.elkjop.com/image/dv_web_D18000135110748/899856/tcl-85-qled780k-4k-qled-tv-2025.jpg?w=1200&q=75",
     "TV",
-    "TCL QLED780K kombinerar 4K UHD HDR, QLED, AiPQ-processor och Motion Clarity för färgstark och skarp HDR-bildkvalitet.",
+    "TCL QLED780K kombinerar 4K UHD HDR, QLED, AiPQ-processor och Motion Clarity för färgstark och skarp HDR-bildkvalitet."
 );
 let samsungTv2 = new ProductCard(
     "Samsung 65” The Frame 4K QLED Smart TV (2025)",
@@ -251,6 +252,7 @@ let samsungTv3 = new ProductCard(
 );
 //#endregion
 
+//Knappar till kategorierna som finns på navbaren
 let gamingButton = document.querySelector("#header-button1");
 let vitvarorButton = document.querySelector("#header-button2");
 let tvButton = document.querySelector("#header-button3");
@@ -269,7 +271,6 @@ function setCategory(category) {
     renderPageContent();
 }
 
-
 //#region Page Renderers
 function renderPageContent() {
     let mainCardContainer = document.querySelector("#main-cardContainer");
@@ -281,16 +282,17 @@ function renderPageContent() {
         // Är en kategori vald så visas endast den kategorin.
         if (activeCategory === null || card.category === activeCategory) {
             mainCardContainer.innerHTML += renderMainContentPage(card);
-        }  
+        }
     }
 
+    //Lägger till en eventListener på alla "Läs Mer" knappar.
     let inspectButton = document.querySelectorAll(".inspect-button");
     inspectButton.forEach((button) => {
         button.addEventListener("click", onProductButtonClick);
     });
 }
 
-
+//Funktion som skapar kortet och bestämmer hur html koden ska se ut med hjälp av kort klassen som matas in i "card"
 function renderMainContentPage(card) {
     return `
             <div class="product-card">
@@ -304,6 +306,7 @@ function renderMainContentPage(card) {
         `;
 }
 
+//Funktion som skapar de focuserade kortet och bestämmer hur html koden ska se ut
 function renderFocusedCardPage(card) {
     return `
             <div class="focused-card">
@@ -319,23 +322,23 @@ function renderFocusedCardPage(card) {
         `;
 }
 
+//Function som kör när man klickar på "Läs Mer" knappen
 function onProductButtonClick(event) {
     let focusedCard = document.querySelector("#main-cardInspect");
     focusedCard.innerHTML = "";
 
     let productName = event.currentTarget.dataset.product;
 
-    // Hitta produkten i arrayen
+    // Hitta produkten i arrayen som man klickar på
     let product = MainContentProductCards.find((p) => p.name === productName);
-
-
     focusedCard.innerHTML += renderFocusedCardPage(product);
-
     focusedCard.style.display = "flex";
 
+    //Lägger till produkten i varukorgen när "buy" knappen trycks
     let buyButton = document.querySelector("#buy-button");
     buyButton.addEventListener("click", () => addToCart(product));
 
+    //Stänger pop up fönstert till de fokuserade kortet
     let closeButton = document.querySelector("#close-button");
     closeButton.addEventListener("click", cleanFocusedCardHTML);
 
@@ -348,6 +351,7 @@ function onProductButtonClick(event) {
     });
 }
 
+//Funktion som rensar fokuserade kortet
 function cleanFocusedCardHTML() {
     let focusedCard = document.querySelector("#main-cardInspect");
     focusedCard.innerHTML = "";

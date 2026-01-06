@@ -83,7 +83,7 @@ let logitechKeyboard = new ProductCard(
     "Logitech G Pro tangentbord är designat för vinnare. Tack vare den kompakta designen utan numerisk knappsats kan du ta med denna best på varje turnering, vare sig det handlar om en vänskapsmatch med polarna eller ett seriöst mästerskap."
 );
 let monitor = new ProductCard(
-    "AOC 27G4HRE 27/FHD/IPS/200Hz/1ms",
+    "AOC 27G4HRE 27”/FHD/IPS/200Hz/1ms",
     3299,
     "https://next-media.elkjop.com/image/dv_web_D1800013238155/918349/aoc-27g4hre-27fhdips200hz1ms.jpg?w=640&q=75",
     "Gaming",
@@ -96,15 +96,29 @@ let mouseMat = new ProductCard(
     "Gaming",
     "Med NOS musmatta för gaming kan du glida och flytta din mus utan hinder. Tack vare den släta ytan får du bra hastighet och precision och de sydda kanterna förhindrar fransning och du får en lång livslängd."
 );
+let console = new ProductCard(
+    "Playstation 5 Pro 2TB",
+    8790,
+    "https://next-media.elkjop.com/image/dv_web_D18000134916959/994805/playstation-5-pro-2tb-spelkonsol.jpg?w=3840&q=75",
+    "Gaming",
+    "PlayStation 5 Pro ger dig silkeslen spelupplevelse med upp till 120 fps i kompatibla spel, med stöd för 120 Hz-utmatning på 4K-skärmar och är förbättrad med AI genom PlayStation Spectral Super Resolution."
+);
 //#endregion
 //#region Vitvaror
 
-let dishwasher = new ProductCard(
+let washingMachine = new ProductCard(
     "Delonghi Tvättmaskin D914PWM25N (9kg)",
     6995,
     "https://next-media.elkjop.com/image/dv_web_D18000134010436/922363/delonghi-tvattmaskin-d914pwm25n-9kg.jpg?w=640&q=75",
     "Vitvaror",
     "Delonghi tvättmaskin D914PWM25N klarar upp till 9 kg tvätt och har 14 program, fördröjd start och en tidsindikator. Den har även ett Stain Remove-program för att ta bort envisa fläckar."
+);
+let washingMachine2 = new ProductCard(
+    "Miele Tvättmaskin WEB695 WCS 125 Edition (8kg)",
+    11995,
+    "https://next-media.elkjop.com/image/dv_web_D1800012698953/725395/miele-tvattmaskin-web695-wcs-125-edition-8kg.jpg?w=1200&q=75",
+    "Vitvaror",
+    "Miele WEB695 WCS 125 i Lotus White erbjuder förstklassig tvättvård med SteamCare, TwinDos automatisk dosering, Wi-Fi och en 59L trumma, vilket säkerställer effektiv och tyst drift samt mångsidiga program för alla typer av textilier."
 );
 let stovetop = new ProductCard(
     "Hisense Induktionshäll HI842SC (80cm)",
@@ -120,118 +134,93 @@ let oven = new ProductCard(
     "Vitvaror",
     "Det gyllenbruna på potatisgratängen. Skorpan på en oxfilé. Saftigheten i en god chokladtårta. Att få jämna resultat varje gång kräver exakt kontrollerad värme, som fördelas konsekvent i hela ugnen. Till skillnad från vanliga ugnar har SurroundCook-ug"
 );
+let dishwasher = new ProductCard(
+    "Bosch Serie 6 Diskmaskin SMU6ZCW71S (vit)",
+    8995,
+    "https://next-media.elkjop.com/image/dv_web_D1800012699179/767176/bosch-serie-6-diskmaskin-smu6zcw71s-vit.jpg?w=1200&q=75",
+    "Vitvaror",
+    "Bosch SMU6ZCW71 diskmaskin är utformad för att leverera effektiv och grundlig rengöring med sina avancerade funktioner, vilket gör den till ett lämpligt tillskott i alla kök.",
+);
+let dishwasher2 = new ProductCard(
+    "Siemens IQ300 Diskmaskin SN43ES71MS (rostfri)",
+    7495,
+    "https://next-media.elkjop.com/image/dv_web_D18000128321881/795102/siemens-iq300-diskmaskin-sn43es71ms-rostfri.jpg?w=1200&q=75",
+    "Vitvaror",
+    "Effektiv och tyst, Siemens SN43ES71MS diskmaskin erbjuder flexibel lastning, avancerad rengöringsteknik och energibesparande funktioner för skinande rena tallrikar varje gång.",
+);
 //#endregion
 //#region TV
 let samsungTv = new ProductCard(
-    "Samsung 55 U8095F 4K smart-TV (2025)",
+    "Samsung 55” U8095F 4K smart-TV (2025)",
     9990,
     "https://next-media.elkjop.com/image/dv_web_D1800013064282/906402/samsung-55-u8095f-4k-smart-tv-2025.jpg?w=640&q=75",
     "TV",
-    "Samsung 55 U8095F 4K smart-TV levererar otroliga bilder med fantastiskt djup och detaljer tack vare sin Crystal Processor 4K, HDR och PurColor. Du kan också njuta av suveränt ljud, det smidiga Tizen OS och massor av spelfunktioner."
+    "Samsung 55” U8095F 4K smart-TV levererar otroliga bilder med fantastiskt djup och detaljer tack vare sin Crystal Processor 4K, HDR och PurColor. Du kan också njuta av suveränt ljud, det smidiga Tizen OS och massor av spelfunktioner."
 );
 let iffalconTv = new ProductCard(
-    "iFFALCON 32 S45 QLED TV (2025)",
+    "iFFALCON 32” S45 QLED TV (2025)",
     4490,
     "https://next-media.elkjop.com/image/dv_web_D18000135517479/995561/iffalcon-32-s45-qled-tv-2025.jpg?w=640&q=75",
     "TV",
     "iFFALCON S45-serien kombinerar en slimmad, modern design med QLED och HDR-bildkvalitet samt det mest avancerade Smart TV-systemet hittills: Android TV med Google Cast inbyggd."
 );
 let lgTv = new ProductCard(
-    "LG 55 C5 Pro 4K OLED evo TV (2025)",
+    "LG 55” C5 Pro 4K OLED evo TV (2025)",
     25990,
     "https://next-media.elkjop.com/image/dv_web_D18000135110753/912294/lg-55-c5-pro-4k-oled-evo-tv-2025.jpg?w=640&q=75",
     "TV",
     "LG OLED evo C5 Pro tar C-serien till nästa nivå med högre ljusstyrka och skärpa tack vare Brightness Booster Pro. Upplev djup svärta, livfulla färger och smarta funktioner – film, spel och sport blir alltid skarpt och realistiskt."
 );
+let tclTv = new ProductCard(
+    "TCL 85” QLED780K 4K QLED TV (2025)",
+    9990,
+    "https://next-media.elkjop.com/image/dv_web_D18000135110748/899856/tcl-85-qled780k-4k-qled-tv-2025.jpg?w=1200&q=75",
+    "TV",
+    "TCL QLED780K kombinerar 4K UHD HDR, QLED, AiPQ-processor och Motion Clarity för färgstark och skarp HDR-bildkvalitet.",
+);
+let samsungTv2 = new ProductCard(
+    "Samsung 65” The Frame 4K QLED Smart TV (2025)",
+    13990,
+    "https://next-media.elkjop.com/image/dv_web_D1800013339810/906429/samsung-65-the-frame-4k-qled-smart-tv-2025.jpg?w=1200&q=75",
+    "TV",
+    "Samsung 65” The Frame 4K QLED Smart-TV levererar imponerande bildkvalitet tack vare sin QLED-teknik och kraftfulla NQ4 AI Gen2-processor. Även när den är avstängd visar denna TV vackra konstverk som kompletterar ditt rum."
+);
+let philipsTv = new ProductCard(
+    "Philips 55” OLED760 4K OLED Smart TV (2025)",
+    11990,
+    "https://next-media.elkjop.com/image/dv_web_D18000130635206/914122/philips-55-oled760-4k-oled-smart-tv-2025.jpg?w=1200&q=75",
+    "TV",
+    "Philips 55” OLED760 4K OLED Smart TV erbjuder förstklassig bildkvalitet och en värld av underhållning inom räckhåll. P5 AI Intelligent Picture Engine med HDR, OLED-teknik och Ambilight ger en uppslukande upplevelse som sträcker sig bortom din skärm."
+);
 //#endregion
-
-//#region Check Category
-isGaming = true;
-isTv = true;
-isVitvaror = true;
-isMobilTelefon = true;
 
 let gamingButton = document.querySelector("#header-button1");
 let vitvarorButton = document.querySelector("#header-button2");
 let tvButton = document.querySelector("#header-button3");
 let mobilTelefonButton = document.querySelector("#header-button4");
 
-gamingButton.addEventListener("click", isGamingTrue);
-vitvarorButton.addEventListener("click", isVitvarorTrue);
-tvButton.addEventListener("click", isTvTrue);
-mobilTelefonButton.addEventListener("click", isMobilTelefonTrue);
+let activeCategory = null;
+gamingButton.addEventListener("click", () => setCategory("Gaming"));
+vitvarorButton.addEventListener("click", () => setCategory("Vitvaror"));
+tvButton.addEventListener("click", () => setCategory("TV"));
+mobilTelefonButton.addEventListener("click", () => setCategory("MobilTelefon"));
 
-function isGamingTrue() {
-    isGaming = true;
-    isVitvaror = false;
-    isTv = false;
-    isMobilTelefon = false;
+function setCategory(category) {
+    activeCategory = category;
     renderPageContent();
 }
 
-function isVitvarorTrue() {
-    isGaming = false;
-    isVitvaror = true;
-    isTv = false;
-    isMobilTelefon = false;
-    renderPageContent();
-}
-
-function isTvTrue() {
-    isGaming = false;
-    isVitvaror = false;
-    isTv = true;
-    isMobilTelefon = false;
-    renderPageContent();
-}
-
-function isMobilTelefonTrue() {
-    isGaming = false;
-    isVitvaror = false;
-    isTv = false;
-    isMobilTelefon = true;
-    renderPageContent();
-}
-//#endregion
 
 //#region Page Renderers
 function renderPageContent() {
-    let main = document.querySelector("main");
     let mainCardContainer = document.querySelector("#main-cardContainer");
-
     mainCardContainer.innerHTML = "";
-    let header = document.querySelector("header");
-    let footer = document.querySelector("footer");
 
     for (let i = 0; i < MainContentProductCards.length; i++) {
-        if (isVitvaror) {
-            if (MainContentProductCards[i].category === "Vitvaror") {
-                mainCardContainer.innerHTML += renderMainContentPage(
-                    MainContentProductCards[i]
-                );
-            }
-        }
-        if (isGaming) {
-            if (MainContentProductCards[i].category === "Gaming") {
-                mainCardContainer.innerHTML += renderMainContentPage(
-                    MainContentProductCards[i]
-                );
-            }
-        }
-        if (isTv) {
-            if (MainContentProductCards[i].category === "TV") {
-                mainCardContainer.innerHTML += renderMainContentPage(
-                    MainContentProductCards[i]
-                );
-            }
-        }
-        if (isMobilTelefon) {
-            if (MainContentProductCards[i].category === "MobilTelefon") {
-                mainCardContainer.innerHTML += renderMainContentPage(
-                    MainContentProductCards[i]
-                );
-            }
-        }
+        const card = MainContentProductCards[i];
+        if (activeCategory === null || card.category === activeCategory) {
+            mainCardContainer.innerHTML += renderMainContentPage(card);
+        }  
     }
 
     let inspectButton = document.querySelectorAll(".inspect-button");
@@ -239,6 +228,7 @@ function renderPageContent() {
         button.addEventListener("click", onProductButtonClick);
     });
 }
+
 
 function renderMainContentPage(card) {
     return `
@@ -272,12 +262,11 @@ function onProductButtonClick(event) {
     let focusedCard = document.querySelector("#main-cardInspect");
     focusedCard.innerHTML = "";
 
-    let productName = event.target.dataset.product;
+    let productName = event.currentTarget.dataset.product;
 
     // Hitta produkten i arrayen
     let product = MainContentProductCards.find((p) => p.name === productName);
 
-    console.log("Hela produktobjektet:", product);
 
     focusedCard.innerHTML += renderFocusedCardPage(product);
 
@@ -292,7 +281,7 @@ function onProductButtonClick(event) {
     const inspectOverlay = document.querySelector("#main-cardInspect");
 
     inspectOverlay.addEventListener("click", (event) => {
-        if (event.target === inspectOverlay) {
+        if (event.currentTarget === inspectOverlay) {
             cleanFocusedCardHTML();
         }
     });
@@ -306,3 +295,4 @@ function cleanFocusedCardHTML() {
 }
 
 //#endregion
+renderPageContent();
